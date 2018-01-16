@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
         
-        request.predicate = NSPredicate(format: "username = %@", "Josie")
+        //request.predicate = NSPredicate(format: "username = %@", "Josie")
         
         request.returnsObjectsAsFaults = false
         
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
                 for result in results as! [NSManagedObject] {
                 
                     if let username = result.value(forKey: "username") as? String {
-                        
+/*
                         context.delete(result)
                         
                         do {
@@ -69,6 +69,7 @@ class ViewController: UIViewController {
                             print("Delete failed")
                             
                         }
+*/
 /*
                         result.setValue("That one guy", forKey: "username")
                         
